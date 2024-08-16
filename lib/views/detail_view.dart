@@ -31,18 +31,20 @@ class BreedDetailView extends StatelessWidget {
                       breed,
                       style: const TextStyle(fontSize: 20),
                     ),
-                    Center(
-                      child: CachedNetworkImage(
-                        imageUrl: state.image,
-                        errorWidget: (context, url, error) => const Icon(
-                          Icons.error,
-                          size: 60,
-                          color: Colors.red,
+                    Expanded(
+                      child: Center(
+                        child: CachedNetworkImage(
+                          imageUrl: state.image,
+                          errorWidget: (context, url, error) => const Icon(
+                            Icons.error,
+                            size: 60,
+                            color: Colors.red,
+                          ),
+                          progressIndicatorBuilder:
+                              (context, url, downloadProgress) =>
+                                  CircularProgressIndicator(
+                                      value: downloadProgress.progress),
                         ),
-                        progressIndicatorBuilder:
-                            (context, url, downloadProgress) =>
-                                CircularProgressIndicator(
-                                    value: downloadProgress.progress),
                       ),
                     ),
                   ],
