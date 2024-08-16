@@ -1,6 +1,7 @@
 import 'package:dog_ceo_example/bloc/breed_detail_bloc.dart';
 import 'package:dog_ceo_example/bloc/breeds_bloc.dart';
 import 'package:dog_ceo_example/custom_slide_transition.dart';
+import 'package:dog_ceo_example/repositories/breeds_repo.dart';
 import 'package:dog_ceo_example/theme_data.dart';
 import 'package:dog_ceo_example/views/detail_view.dart';
 import 'package:flutter/material.dart';
@@ -21,10 +22,10 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<BreedsBloc>(
-          create: (BuildContext context) => BreedsBloc(),
+          create: (BuildContext context) => BreedsBloc(BreedsRepo()),
         ),
         BlocProvider<BreedDetailBloc>(
-          create: (BuildContext context) => BreedDetailBloc(),
+          create: (BuildContext context) => BreedDetailBloc(BreedsRepo()),
         ),
       ],
       child: MaterialApp.router(

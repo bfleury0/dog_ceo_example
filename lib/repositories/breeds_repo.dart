@@ -1,6 +1,6 @@
 import 'package:dog_ceo_example/data/dio_client.dart';
 
-class BreedsRespository {
+class BreedsRepo {
   final client = DioClient();
 
   Future<List<String>> fetchBreeds() async {

@@ -1,18 +1,19 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:dog_ceo_example/repositories/breeds_respository.dart';
+import 'package:dog_ceo_example/repositories/breeds_repo.dart';
+import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 
 part 'breeds_event.dart';
 part 'breeds_state.dart';
 
 class BreedsBloc extends Bloc<BreedsEvent, BreedsState> {
-  BreedsBloc() : super(BreedsInitial()) {
+  BreedsRepo breedsRespository = BreedsRepo();
+
+  BreedsBloc(this.breedsRespository) : super(BreedsInitial()) {
     on<BreedsFetchEvent>(onBreedsFetchEvent);
   }
-
-  BreedsRespository breedsRespository = BreedsRespository();
 
   FutureOr<void> onBreedsFetchEvent(
       BreedsFetchEvent event, Emitter<BreedsState> emit) async {
