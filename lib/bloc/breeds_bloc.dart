@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:dog_ceo_example/data/dio_client.dart';
+import 'package:dog_ceo_example/repositories/breeds_respository.dart';
 import 'package:flutter/material.dart';
 
 part 'breeds_event.dart';
@@ -12,21 +12,14 @@ class BreedsBloc extends Bloc<BreedsEvent, BreedsState> {
     on<BreedsFetchEvent>(onBreedsFetchEvent);
   }
 
+  BreedsRespository breedsRespository = BreedsRespository();
+
   FutureOr<void> onBreedsFetchEvent(
       BreedsFetchEvent event, Emitter<BreedsState> emit) async {
     emit(BreedsLoading());
     try {
-      var client = DioClient();
-      await client.dio.get('api/breeds/list/all').then((value) {
-        List<String> breeds = [];
-        value.data['message'].forEach((breed, subbreed) {
-          breeds.add(breed);
-        });
-
-        emit(BreedsSuccess(breeds: breeds));
-      }).catchError((error) {
-        emit(BreedsFailure(errorMessage: error.toString()));
-      });
+      final breeds = await breedsRespository.fetchBreeds();
+      emit(BreedsSuccess(breeds: breeds));
     } catch (e) {
       emit(BreedsFailure(errorMessage: e.toString()));
     }
