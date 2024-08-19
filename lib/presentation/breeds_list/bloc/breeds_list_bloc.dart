@@ -12,7 +12,6 @@ class BreedsListBloc extends Bloc<BreedsListEvent, BreedsListState> {
   BreedsListBloc(
     this._api,
     this._navigator,
-    @factoryParam this._launchId,
   ) : super(const InitialBreedsListState()) {
     on<BreedsListEvent>(
       (event, emit) => switch (event) {
@@ -27,8 +26,6 @@ class BreedsListBloc extends Bloc<BreedsListEvent, BreedsListState> {
 
   final DogBreedApi _api;
   final DogCeoNavigator _navigator;
-
-  final String? _launchId;
 
   Future<void> _onLoad(
     LoadBreedsListEvent event,

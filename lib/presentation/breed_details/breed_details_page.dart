@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dog_ceo_example/constants/text_constants.dart' show appTitle;
 import 'package:dog_ceo_example/di/di_container.dart';
 import 'package:dog_ceo_example/domain/model/breed.dart';
 import 'package:dog_ceo_example/presentation/breed_details/bloc/breed_details_bloc.dart';

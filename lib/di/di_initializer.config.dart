@@ -71,14 +71,9 @@ extension GetItInjectableX on _i1.GetIt {
           gh<_i7.DogBreedApi>(),
           _breedId,
         ));
-    gh.factoryParam<_i10.BreedsListBloc, String?, dynamic>((
-      _launchId,
-      _,
-    ) =>
-        _i10.BreedsListBloc(
+    gh.factory<_i10.BreedsListBloc>(() => _i10.BreedsListBloc(
           gh<_i7.DogBreedApi>(),
           gh<_i8.DogCeoNavigator>(),
-          _launchId,
         ));
     return this;
   }
