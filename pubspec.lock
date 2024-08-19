@@ -37,10 +37,10 @@ packages:
     dependency: "direct main"
     description:
       name: auto_route
-      sha256: "901050372696c7fddb5b698ea328088366c13e133f9eac456cfca250b7b3c37c"
+      sha256: d43d31191c8c80667820153cb110dd1dd84c282b956df2ab9352fbc67e0649e1
       url: "https://pub.dev"
     source: hosted
-    version: "9.2.1+1"
+    version: "9.2.1"
   auto_route_generator:
     dependency: "direct dev"
     description:
@@ -225,14 +225,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.0"
-  color:
-    dependency: transitive
-    description:
-      name: color
-      sha256: ddcdf1b3badd7008233f5acffaf20ca9f5dc2cd0172b75f68f24526a5f5725cb
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.0"
   convert:
     dependency: transitive
     description:
@@ -366,22 +358,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.4.1"
-  flutter_gen_core:
-    dependency: transitive
-    description:
-      name: flutter_gen_core
-      sha256: "3a6c3dbc1c0e260088e9c7ed1ba905436844e8c01a44799f6281edada9e45308"
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.4.0"
-  flutter_gen_runner:
-    dependency: "direct dev"
-    description:
-      name: flutter_gen_runner
-      sha256: "24889d5140b03997f7148066a9c5fab8b606dff36093434c782d7a7fb22c6fb6"
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.4.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -440,14 +416,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.2"
-  go_router:
-    dependency: "direct main"
-    description:
-      name: go_router
-      sha256: ddc16d34b0d74cb313986918c0f0885a7ba2fc24d8fb8419de75f0015144ccfe
-      url: "https://pub.dev"
-    source: hosted
-    version: "14.2.3"
   graphs:
     dependency: transitive
     description:
@@ -601,7 +569,7 @@ packages:
     source: hosted
     version: "1.0.5"
   mocktail:
-    dependency: "direct dev"
+    dependency: transitive
     description:
       name: mocktail
       sha256: "890df3f9688106f25755f26b1c60589a92b3ab91a22b8b224947ad041bf172d8"
