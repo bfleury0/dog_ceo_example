@@ -5,3 +5,15 @@ global_options:
   json_serializable:
     runs_before:
       - retrofit_generator
+targets:
+  $default:
+    builders:
+      json_serializable:
+        options:
+          include_if_null: false
+          explicit_to_json: true
+        generate_for:
+          - lib/domain**/*.dart
+      bdd_widget_test|featureBuilder:
+        options:
+          include: package:bdd_widget_test/bdd_options.yaml
