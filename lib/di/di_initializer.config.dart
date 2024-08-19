@@ -46,7 +46,7 @@ extension GetItInjectableX on _i1.GetIt {
     gh.factory<_i6.Launcher>(() => const _i6.Launcher());
     gh.factory<String>(
       () => dIApiModule.baseUrl,
-      instanceName: 'SpaceFlightNewsBaseUrl',
+      instanceName: 'DogBreedsBaseUrl',
       registerFor: {
         _prod,
         _dev,
@@ -54,12 +54,12 @@ extension GetItInjectableX on _i1.GetIt {
     );
     gh.factory<String>(
       () => dIApiModule.testBaseUrl,
-      instanceName: 'SpaceFlightNewsBaseUrl',
+      instanceName: 'DogBreedsBaseUrl',
       registerFor: {_test},
     );
     gh.factory<_i7.DogBreedApi>(() => _i7.DogBreedApi(
           gh<_i3.Dio>(),
-          baseUrl: gh<String>(instanceName: 'SpaceFlightNewsBaseUrl'),
+          baseUrl: gh<String>(instanceName: 'DogBreedsBaseUrl'),
         ));
     gh.factory<_i8.DogCeoNavigator>(
         () => _i8.DogCeoNavigator(gh<_i4.DogCeoRouter>()));

@@ -1,1 +1,1 @@
-const dogBreedsBaseUrlNamed = 'SpaceFlightNewsBaseUrl';
+const dogBreedsBaseUrlNamed = 'DogBreedsBaseUrl';
